@@ -25,6 +25,8 @@ Python client for interacting with the Trace api. For information on the API see
 Getting Started
 ---------------
 
+To use in REPL or a non-GUI app:
+
 .. code-block:: python
 
     from py_trace import Trace
@@ -44,7 +46,7 @@ To use in a web app (using a very basic Flask example):
     import json
 
     app = Flask(__name__)
-    trace = Trace(<client_key>, <client_secret>, host + '/auth_callback')
+    trace = Trace(<client_key>, <client_secret>, 'http://127.0.0.1:5000/auth_callback')
 
     @app.route('/auth_callback')
     def handle_redirect():
